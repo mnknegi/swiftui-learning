@@ -12,6 +12,7 @@ struct ContentView: View {
 
         VStack() {
 
+            // Basic Text control
             Text("Stay hungry. Stay foolish")
             //            .font(.title)
                 .font(.system(.title, design: .rounded))
@@ -19,6 +20,7 @@ struct ContentView: View {
                 .foregroundStyle(.green)
                 .padding()
 
+            // Multi line support
             Text("Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma—which is living with the results of other people’s thinking. Don ’t let the noise of others’ opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition.")
                 .padding()
                 .multilineTextAlignment(.center)
@@ -34,10 +36,12 @@ struct ContentView: View {
                 .rotationEffect(.degrees(330.0))
                 .shadow(color: .gray, radius: 2, x: 0.0, y: 15.0)
 
+            // Using custom fonts
             Text("Custom font")
                 .padding(.top, 40)
                 .font(.custom("Nunito", size: 25.0))
 
+            // Markup support
             Text("SwiftUI has support for markdown language. **This is your bold text**. *This is italic*. This is a link to open [Google](https://www.google.com) web page.")
                 .padding()
         }
