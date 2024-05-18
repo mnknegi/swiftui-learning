@@ -17,19 +17,7 @@ struct FrameworkDetailView: View {
     var body: some View {
         VStack {
 
-            HStack {
-                Button(action: {
-                    isShowingDetailView = false
-                }, label: {
-                    Image(systemName: "xmark")
-                        .foregroundStyle(.red)
-                        .imageScale(.large)
-                        .frame(width: 44, height: 44)
-                })
-
-                Spacer()
-            }
-            .padding()
+            ModelXButton(isShowingDetailView: $isShowingDetailView)
 
             Spacer()
 
