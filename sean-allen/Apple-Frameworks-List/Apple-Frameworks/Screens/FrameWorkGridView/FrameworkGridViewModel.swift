@@ -15,8 +15,4 @@ final class FrameworkGridViewModel: ObservableObject { // allow object to publis
 
     @Published var isShowingDetailView = false // Broadcast changes
 
-    let column: [GridItem] = [GridItem(.flexible()),
-                              GridItem(.flexible()),
-                              GridItem(.flexible())]
-
 }

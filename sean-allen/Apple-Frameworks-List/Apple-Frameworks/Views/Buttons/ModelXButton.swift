@@ -17,7 +17,7 @@ struct ModelXButton: View {
                 isShowingDetailView = false
             }, label: {
                 Image(systemName: "xmark")
-                    .foregroundStyle(.red)
+                    .foregroundStyle(Color(.label))
                     .imageScale(.large)
                     .frame(width: 44, height: 44)
             })

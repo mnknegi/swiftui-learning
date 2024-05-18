@@ -17,8 +17,6 @@ struct FrameworkDetailView: View {
     var body: some View {
         VStack {
 
-            ModelXButton(isShowingDetailView: $isShowingDetailView)
-
             Spacer()
 
             FrameworkTitleView(framework: framework)
