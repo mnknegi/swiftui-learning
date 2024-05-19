@@ -11,15 +11,10 @@ struct FrameworkDetailView: View {
 
     let framework: Framework
 
-    @Binding var isShowingDetailView: Bool
     @State var isShowingSafariView = false
 
     var body: some View {
         VStack {
-
-            ModelXButton(isShowingDetailView: $isShowingDetailView)
-
-            Spacer()
 
             FrameworkTitleView(framework: framework)
 
@@ -32,8 +27,12 @@ struct FrameworkDetailView: View {
             Button(action: {
                 isShowingSafariView = true
             }, label: {
-                AFButton(title: "Learn More")
+//                AFButton(title: "Learn More")
+                Label("Learn More", systemImage: "book.fill")
             })
+            .buttonStyle(.bordered)
+            .controlSize(.large)
+            .tint(.red)
             .fullScreenCover(isPresented: $isShowingSafariView, content: {
                 SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
             })
@@ -42,5 +41,5 @@ struct FrameworkDetailView: View {
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework, isShowingDetailView: .constant(false))
+    FrameworkDetailView(framework: MockData.sampleFramework)
 }
